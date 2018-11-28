@@ -300,10 +300,10 @@ img {
 }
 
 .icon-m {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   display: inline-block;
-  line-height: 60px;
+  line-height: 50px;
   text-align: center;
   color: #fff;
   font-size: 22px;
@@ -1164,7 +1164,7 @@ h5,
 }
 
 .home-banner-03 .btn {
-  min-width: 140px;
+  min-width: 58px;
 }
 .home-banner-03 .btn:not(:hover) {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.28);
@@ -2097,7 +2097,7 @@ h5,
   box-shadow: 0 8px 50px -6px rgba(84,84,120,.26);
   transition: ease all 0.3s;
   -webkit-transition: ease all 0.3s;
-  padding: 10%;
+  padding: 5%;
   position: relative;
   background: #fff;
 }
@@ -2105,8 +2105,8 @@ h5,
   margin-top: -10px;
 }
 .price-table-01 .pt-head {
-  padding: 0 0 25px;
-  border-bottom: 1px solid #eee;
+  /* padding: 0 0 25px;
+  border-bottom: 1px solid #eee; */
 }
 .price-table-01 .pt-head i {
     position: absolute;
@@ -5461,4 +5461,9 @@ blockquote.blockquote-left .parson {
   .sm-p-24-half-b {padding-bottom: 24.5%;}
   .sm-p-25-b {padding-bottom: 25%;}
   .sm-p-25-half-b {padding-bottom: 25.5%;}
+}
+
+
+.get-btn{
+  padding: 5px 4px !important;
 }
