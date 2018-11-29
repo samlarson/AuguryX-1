@@ -37,7 +37,6 @@
       href="static/plugin/themify-icons/themify-icons.css"
       rel="stylesheet"
     />
-
     <!-- End -->
 
     <!-- Theme css -->
@@ -63,29 +62,31 @@
       <nav class="navbar header-nav header-nav-style-2 navbar-expand-lg">
         <div class="container container-large">
       
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.html">
               <img class="dark-logo" src="static/img/logo.png" title="" alt="">
               <img class="light-logo" src="static/img/logo.png" title="" alt="">
           </a>
+         
         </div>
+         
       </nav> 
     </header>
   <main>
     
     <!-- Home -->
-    <section id="home" class="home-banner-03 gray-bg">
+    <section id="home" class="home-banner-03 gray-bg" style="position: absolute !important;height: 100%;">
       <div class="home-effect-bg"><img src="static/img/home-banner-3.svg" title="" alt=""></div>
       <div class="container container-large">
         <div class="row align-items-center m-80px-t sm-p-40px-b">
-          <div class="col-md-6 col-lg-6 right-img sm-m-30px-t">
+          <div class="col-md-6 right-img sm-m-30px-t">
               <h2 style="text-align:center;color: #6c63ff;">Welcome! How would you like to get started?</h2>
               <img src="static/img/home-banner-right-1.svg" title="" alt="">
            
           </div>
-          <div class="col-md-6 col-lg-4">
+          <div class="col-md-4 offset-md-1">
               <div class="row">
-                  <a href="" style="cursor: pointer;">
-                    <div class="col-md-12 p-7-b">
+                  <a href="signup.html" style="cursor: pointer; float: right;">
+                    <div class="col-md-12 p-3-b">
                       <div class="price-table-01">
                         <div class="pt-head">
                           <i class="icon-m border-radius theme-bg ti-bar-chart-alt"></i>
@@ -99,8 +100,8 @@
                     </div>
                   </a>
                   
-                  <a href="" style="cursor: pointer;">
-                    <div class="col-md-12 p-7-b">
+                  <a  href="new.html" style="cursor: pointer; float: right;">
+                    <div class="col-md-12 p-3-b">
                       <div class="price-table-01">
                         <div class="pt-head">
                           <i class="icon-m border-radius theme-2nd ti-world"></i>
@@ -111,8 +112,8 @@
                     </div>
                   </a>
 
-                  <a href="" style="cursor: pointer;">
-                    <div class="col-md-12 p-7-b">
+                  <a href="#" class="md-trigger"  style="cursor: pointer; float: right;">
+                    <div class="col-md-12 p-3-b">
                       <div class="price-table-01">
                         <div class="pt-head">
                           <i class="icon-m border-radius theme-bg ti-user"></i>
@@ -123,8 +124,8 @@
                     </div>
                   </a>
 
-                  <a href="" style="cursor: pointer;">
-                    <div class="col-md-12 p-7-b">
+                  <a href="#" class="md-trigger" style="cursor: pointer; float: right;">
+                    <div class="col-md-12 p-3-b">
                       <div class="price-table-01">
                         <div class="pt-head">
                           <i class="icon-m border-radius theme-2nd ti-menu-alt"></i>
@@ -146,8 +147,59 @@
   </main>
   <!-- / -->
 
-  
 
+  <div class="md-modal md-effect-12">
+      <div class="closebtn">
+          <i class="md-close icon-m border-radius theme-bg ti-close"></i>
+      </div>
+      <div class="md-content">
+          <div class=" text-center">
+              <div class="">
+                  <img class="u-rounded u-figure-size--128 " src="https://wwws.betterment.com/assets/advisors/benke-6e96824d928ca7e42bab7caeaebeba95eee7477124a6443eb7a1b18978d4533a.jpg" alt="Benke" />
+
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Hi, I'm Alex, and I'll be guiding you today.</h5>
+                <p class="card-text">I'll ask a few short questions, and then tell you how we can help you maximize your money..</p>
+                <a href="#" class="btn btn-theme">Continue</a>
+              </div>
+            </div>
+        
+      </div>
+  </div>
+
+  <div class="md-overlay"></div>
+
+
+
+<!-- The Guidance Modal -->
+  <div class="modal" id="guidance_modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title model_style">Guide to Betterment</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+              <img class="u-rounded u-figure-size--128 sc-m-v--m" src="https://wwws.betterment.com/assets/advisors/benke-6e96824d928ca7e42bab7caeaebeba95eee7477124a6443eb7a1b18978d4533a.jpg" alt="Benke" />
+
+              <h2 class="style">Hi, I'm Alex, and I'll be guiding you today.</h2>
+          
+                <p class="p_style">I'll ask a few short questions, and then tell you how we can help you maximize your money.</p>
+          
+              <div class="sc-Actions">
+                <button name="button" type="submit" data-disable-with="Starting.." class="btn">Continue</button>
+              </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
   <!-- Jquery -->
   <script src="static/js/jquery-3.2.1.min.js"></script>
   <script src="static/js/jquery-migrate-3.0.0.min.js"></script>
@@ -162,9 +214,20 @@
   <!-- Custom -->
   <script src="static/js/custom.js"></script>
   <!-- End -->
-
+  <script>
+    $(function () {
+  
+      $('.md-trigger').on('click', function() {
+        $('.md-modal').addClass('md-show');
+      });
+      
+      $('.md-close').on('click', function() {
+        $('.md-modal').removeClass('md-show');
+      });
+      
+    });
+  </script>
 </body>
 <!-- ========== End of Body ========== -->
 
-<!-- Mirrored from www.inventheme.com/themeforest/azomia/azomia/index-02.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Nov 2018 16:43:09 GMT -->
 </html>
